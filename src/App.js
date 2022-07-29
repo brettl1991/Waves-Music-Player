@@ -5,6 +5,9 @@ import Song from "./components/Song";
 //Import style
 import "./styles/app.scss";
 
+//Import Util
+import data from "./util";
+
 function App() {
   return (
     <div className="App">
