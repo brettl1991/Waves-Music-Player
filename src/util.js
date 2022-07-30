@@ -10,7 +10,7 @@ function chillHop() {
       cover:
         "https://chillhop.com/wp-content/uploads/2022/04/73f23095038f6f023083520706f3e5345f5dd682-1024x1024.jpg",
       id: uuidv4(),
-      active: false,
+      active: true,
       color: ["#EB7AAE", "#71BEE1"],
       audio: "https://mp3.chillhop.com/serve.php/?mp3=32860",
     },
