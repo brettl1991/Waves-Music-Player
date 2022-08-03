@@ -1,5 +1,5 @@
 //This component controls the music player
-import { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
