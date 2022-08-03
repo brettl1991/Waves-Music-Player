@@ -25,6 +25,8 @@ function App() {
     duration: 0,
   });
 
+  const [libraryStatus, setLibraryStatus] = useState(false);
+
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
     // console.log(e);
@@ -35,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
         audioRef={audioRef}
