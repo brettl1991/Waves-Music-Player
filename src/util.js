@@ -73,7 +73,8 @@ function chillHop() {
     {
       name: "Vibe Vibe",
       artist: "Moods, Yasper",
-      cover: "",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/4b9345777ac06217801ed6b44c66800829e122c3-1024x1024.jpg",
       id: uuidv4(),
       active: false,
       color: ["#92A92A7B87B8", "#58543B"],
@@ -81,14 +82,14 @@ function chillHop() {
     },
 
     {
-      name: "Tropical Midnight",
-      artist: "C Y G N",
+      name: "Hyperspace",
+      artist: "Shrimpnose, nobuddy",
       cover:
-        "https://chillhop.com/wp-content/uploads/2022/02/7c943e75ba2e1017052e03444366c79445b43195-1024x1024.jpg",
+        "https://chillhop.com/wp-content/uploads/2022/07/49bc1653b33bd42e570ecdeba7be86e8bd1b5c38-1024x1024.jpg",
       id: uuidv4(),
       active: false,
-      color: ["###92A7B8", "###10352A"],
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=31516",
+      color: ["#AE8F9F", "#909EB5"],
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=36925",
     },
 
     {
