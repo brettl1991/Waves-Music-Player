@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
+import Nav from "./components/Nav";
 
 //Import style
 import "./styles/app.scss";
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <Song currentSong={currentSong} />
       <Player
         audioRef={audioRef}
