@@ -8,7 +8,7 @@ const LibrarySong = ({
 }) => {
   const songSelectHandler = () => {
     const selectedSong = song;
-    setCurrentSong(selectedSong[0]);
+    setCurrentSong(selectedSong);
     //check if the song is playing
     if (isPlaying) {
       const playPromise = audioRef.current.play();
