@@ -64,3 +64,8 @@
 .selected {
   background: #fdb1ae;
 }
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
