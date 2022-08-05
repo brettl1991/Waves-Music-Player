@@ -1,5 +1,6 @@
 //This component controls the music player
 
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -17,7 +18,28 @@ const Player = ({
   setIsPlaying,
   songs,
   setCurrentSong,
+  setSongs,
 }) => {
+  //UseEffect
+  useEffect(() => {
+    //add active state
+    const newSongs = songs.map((song) => {
+      //id represent a song, song.id represents song from state
+      if (song.id === currentSong.id) {
+        return {
+          ...song,
+          active: true,
+        };
+      } else {
+        return {
+          ...song,
+          active: false,
+        };
+      }
+    });
+    setSongs(newSongs);
+    //run the func every time the cur son is updated
+  }, [currentSong]);
   //Event handlers
   const playSongHandler = () => {
     if (isPlaying) {
