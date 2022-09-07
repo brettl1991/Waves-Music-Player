@@ -5,6 +5,7 @@ import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
+import Waves from "./components/Waves";
 
 //Import style
 import "./styles/app.scss";
@@ -52,16 +53,7 @@ function App() {
   };
   return (
     <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-      <div class="ocean" style={{ background: `${currentSong.color[0]}` }}>
-        <div
-          class="wave"
-          style={{ background: `${currentSong.color[1]}` }}
-        ></div>
-        <div
-          class="wave"
-          style={{ background: `${currentSong.color[1]}` }}
-        ></div>
-      </div>
+      <Waves currentSong={currentSong} />
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} isPlaying={isPlaying} />
       <Player
