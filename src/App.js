@@ -52,13 +52,23 @@ function App() {
   };
   return (
     <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+      <div class="ocean" style={{ background: `${currentSong.color[0]}` }}>
+        <div
+          class="wave"
+          style={{ background: `${currentSong.color[1]}` }}
+        ></div>
+        <div
+          class="wave"
+          style={{ background: `${currentSong.color[1]}` }}
+        ></div>
+      </div>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
+      <Song currentSong={currentSong} isPlaying={isPlaying} />
       <Player
-        audioRef={audioRef}
-        setIsPlaying={setIsPlaying}
-        isPlaying={isPlaying}
         currentSong={currentSong}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        audioRef={audioRef}
         setSongInfo={setSongInfo}
         songInfo={songInfo}
         songs={songs}
@@ -66,9 +76,9 @@ function App() {
         setSongs={setSongs}
       />
       <Library
-        audioRef={audioRef}
         songs={songs}
         setCurrentSong={setCurrentSong}
+        audioRef={audioRef}
         isPlaying={isPlaying}
         setSongs={setSongs}
         libraryStatus={libraryStatus}
@@ -79,9 +89,8 @@ function App() {
         ref={audioRef}
         src={currentSong.audio}
         onEnded={songEndHandler}
-      ></audio>
+      />
     </div>
   );
 }
-
 export default App;

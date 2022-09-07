@@ -20,31 +20,27 @@ const Player = ({
   setSongs,
 }) => {
   const activeLibraryHandler = (nextPrev) => {
-    const newSongs = songs.map((song) => {
-      //id represent a song, song.id represents song from state
-      if (song.id === nextPrev.id) {
+    const newSongs = songs.map((songClicked) => {
+      if (songClicked.id === nextPrev.id) {
         return {
-          ...song,
+          ...songClicked,
           active: true,
         };
       } else {
         return {
-          ...song,
+          ...songClicked,
           active: false,
         };
       }
     });
     setSongs(newSongs);
+    if (isPlaying) audioRef.current.play();
   };
+
   //Event handlers
   const playSongHandler = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(!isPlaying);
-    } else {
-      audioRef.current.play();
-      setIsPlaying(!isPlaying);
-    }
+    isPlaying ? audioRef.current.pause() : audioRef.current.play();
+    setIsPlaying(!isPlaying);
   };
 
   const getTime = (time) => {

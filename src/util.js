@@ -13,6 +13,7 @@ function chillHop() {
       active: true,
       color: ["#EB7AAE", "#71BEE1"],
       audio: "https://mp3.chillhop.com/serve.php/?mp3=32860",
+      background: "img/bg-img.jpeg",
     },
 
     {
