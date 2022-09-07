@@ -129,3 +129,7 @@ function chillHop() {
 }
 
 export default chillHop;
+
+export const isMobile = window.matchMedia(
+  "only screen and (max-width: 768px)"
+).matches;

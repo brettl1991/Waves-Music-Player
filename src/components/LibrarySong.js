@@ -1,3 +1,5 @@
+import { isMobile } from "../util";
+
 const LibrarySong = ({
   song,
   songs,
@@ -6,6 +8,8 @@ const LibrarySong = ({
   audioRef,
   isPlaying,
   setSongs,
+  libraryStatus,
+  setLibraryStatus,
 }) => {
   const songSelectHandler = async () => {
     const selectedSong = song;
@@ -29,6 +33,11 @@ const LibrarySong = ({
 
     //check if the song is playing
     if (isPlaying) audioRef.current.play();
+
+    // check if is mobile then close the library
+    if (isMobile) {
+      setLibraryStatus(!libraryStatus);
+    }
   };
   return (
     <div
